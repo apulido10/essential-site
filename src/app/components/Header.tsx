@@ -20,9 +20,13 @@ export default function Header() {
           {/* Desktop navigation */}
           <nav className="hidden md:flex">
             <ul className="flex items-center  gap-10 text-gray-900 text-base md:text-lg ">
-              <li className="cursor-pointer hover:text-blue-800">Home</li>
-              <li className="cursor-pointer hover:text-blue-800">Services</li>
-              <li className="cursor-pointer hover:text-blue-800">Contact</li>
+              <li className="cursor-pointer hover:text-blue-800">
+                <a href="/">Home</a>
+              </li>
+              <li className="cursor-pointer hover:text-blue-800"><a href="/Bundles">Bundles</a></li>
+              <li className="cursor-pointer hover:text-blue-800">
+                <a href="/book">Book</a>
+              </li>{" "}
             </ul>
           </nav>
           {/* Mobile Burger */}
@@ -57,19 +61,19 @@ export default function Header() {
                 className="cursor-pointer hover:text-blue-800"
                 onClick={() => setIsOpen(false)}
               >
-                Home
+                <a href="/">Home</a>
               </li>
               <li
                 className="cursor-pointer hover:text-blue-800"
                 onClick={() => setIsOpen(false)}
               >
-                Services
+                <a href="/Bundles">Bundles</a>
               </li>
               <li
                 className="cursor-pointer hover:text-blue-800"
                 onClick={() => setIsOpen(false)}
               >
-                Contact
+                <a href="/book">Book</a>
               </li>
             </ul>
           </nav>
