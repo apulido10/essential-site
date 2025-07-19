@@ -33,7 +33,7 @@ export default function WhyUs() {
             Why Choose Us
           </h2>
           <p className="text-lg text-gray-600 mb-12">
-            Here’s what makes EssentialSites.co a smart choice for your
+            Here&apos;s what makes EssentialSites.co a smart choice for your
             business.
           </p>
 

@@ -1,4 +1,4 @@
-import { div } from "framer-motion/client";
+
 import Header from "../components/Header";
 export default function Quote() {
   return (
@@ -10,7 +10,7 @@ export default function Quote() {
             Get a Personalized Quote
           </h2>
           <p className="text-lg text-gray-600 mb-10">
-            Fill out this form with a few details about your business and we'll
+            Fill out this form with a few details about your business and we&apos;ll
             send you a personalized proposal within 24 hours.
           </p>
 

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Header from "../components/Header";
-import { div } from "framer-motion/client";
+
 const bundles = [
   {
     title: "Starter Bundle",

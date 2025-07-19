@@ -1,4 +1,4 @@
-import Head from "next/head";
+
 import Header from "../components/Header";
 export default function BookPage() {
   return (
@@ -10,7 +10,7 @@ export default function BookPage() {
           Book a Free Consultation
         </h1>
         <p className="text-gray-600 mb-10 text-lg">
-          Pick a time that works best for you. We'll chat about your website and goals.
+          Pick a time that works best for you. We&apos;ll chat about your website and goals.
         </p>
 
         <div className="w-full">

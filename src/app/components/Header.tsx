@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { HiMenu, HiX } from "react-icons/hi";
+import Link from "next/link";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,11 +22,11 @@ export default function Header() {
           <nav className="hidden md:flex">
             <ul className="flex items-center  gap-10 text-gray-900 text-base md:text-lg ">
               <li className="cursor-pointer hover:text-blue-800">
-                <a href="/">Home</a>
+                <Link href="/">Home</Link>
               </li>
-              <li className="cursor-pointer hover:text-blue-800"><a href="/Bundles">Bundles</a></li>
+              <li className="cursor-pointer hover:text-blue-800"><Link href="/Bundles">Bundles</Link></li>
               <li className="cursor-pointer hover:text-blue-800">
-                <a href="/book">Book</a>
+                <Link href="/book">Book</Link>
               </li>{" "}
             </ul>
           </nav>
@@ -61,19 +62,19 @@ export default function Header() {
                 className="cursor-pointer hover:text-blue-800"
                 onClick={() => setIsOpen(false)}
               >
-                <a href="/">Home</a>
+                <Link href="/">Home</Link>
               </li>
               <li
                 className="cursor-pointer hover:text-blue-800"
                 onClick={() => setIsOpen(false)}
               >
-                <a href="/Bundles">Bundles</a>
+                <Link href="/Bundles">Bundles</Link>
               </li>
               <li
                 className="cursor-pointer hover:text-blue-800"
                 onClick={() => setIsOpen(false)}
               >
-                <a href="/book">Book</a>
+                <Link href="/book">Book</Link>
               </li>
             </ul>
           </nav>
