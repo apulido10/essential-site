@@ -16,15 +16,16 @@ export default function Header({ lang, dict }: HeaderProps) {
   const switchedPath = pathname.replace(`/${lang}`, `/${otherLang}`);
 
   return (
+    <>
     <header className="fixed top-0 left-0 right-0 z-50 bg-dark/90 backdrop-blur-md border-b border-white/5">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
         <Link href={`/${lang}`}>
           <Image
             src="/images/essentiallogo.png"
             alt="Essential Sites"
-            width={180}
+            width={160}
             height={60}
-            className="h-10 w-auto invert"
+            className=" w-auto invert"
           />
         </Link>
 
@@ -54,16 +55,18 @@ export default function Header({ lang, dict }: HeaderProps) {
         </div>
       </div>
 
+    </header>
+
       {isOpen && (
-        <div className="fixed inset-0 bg-black/60 z-40" onClick={() => setIsOpen(false)} />
+        <div className="fixed inset-0 bg-black/60 z-[60]" onClick={() => setIsOpen(false)} />
       )}
 
       <div
-        className={`fixed top-0 right-0 h-full w-72 bg-dark-secondary border-l border-white/5 transform ${
+        className={`fixed top-0 right-0 h-full w-full sm:w-72 bg-[#111111] transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out z-50`}
+        } transition-transform duration-300 ease-in-out z-[70]`}
       >
-        <div className="flex items-center justify-between px-6 py-4 border-b border-white/5">
+        <div className="flex items-center justify-between px-6 py-4 border-b border-white/10">
           <span className="text-white font-medium">Menu</span>
           <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-white" aria-label="Close Menu">
             <HiX size={24} />
@@ -78,6 +81,6 @@ export default function Header({ lang, dict }: HeaderProps) {
           </Link>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
