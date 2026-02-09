@@ -16,7 +16,6 @@ export default function Footer({ lang, dict }: FooterProps) {
         </div>
         <div className="flex items-center gap-6 text-sm">
           <Link href={`/${lang}/Bundles`} className="text-gray-500 hover:text-white transition-colors">{dict.nav.bundles}</Link>
-          <Link href={`/${lang}/book`} className="text-gray-500 hover:text-white transition-colors">{dict.nav.book}</Link>
           <a href="mailto:hello@essentialsites.co" className="text-gray-500 hover:text-white transition-colors">
             hello@essentialsites.co
           </a>

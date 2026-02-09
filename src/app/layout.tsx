@@ -1,21 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Analytics } from '@vercel/analytics/next';
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://essentialsites.co"),
   title: "Essential Sites | Web Design for Small Business",
-  description: "Fast, clean websites that help small businesses grow. No hassle. Just results.",
+  description:
+    "Fast, clean websites that help small businesses grow. No hassle. Just results.",
+  robots: { index: true, follow: true },
+  openGraph: {
+    siteName: "Essential Sites",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -23,14 +18,5 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-        <Analytics/>
-      </body>
-    </html>
-  );
+  return children;
 }

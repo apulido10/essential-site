@@ -1,4 +1,55 @@
+import type { Metadata } from "next";
 import getDictionary, { type Lang } from "@/lib/getDictionary";
+
+const BASE_URL = "https://essentialsites.co";
+
+const meta: Record<Lang, { title: string; description: string }> = {
+  en: {
+    title: "Get a Free Quote | Essential Sites",
+    description:
+      "Request a personalized website proposal. Tell us about your business and get a custom quote within 24 hours.",
+  },
+  es: {
+    title: "Cotización Gratis | Essential Sites",
+    description:
+      "Solicita una propuesta personalizada de sitio web. Cuéntanos sobre tu negocio y recibe una cotización en 24 horas.",
+  },
+};
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>;
+}): Promise<Metadata> {
+  const { lang: rawLang } = await params;
+  const lang = rawLang as Lang;
+  const { title, description } = meta[lang];
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: `${BASE_URL}/${lang}/Quote`,
+      languages: {
+        en: `${BASE_URL}/en/Quote`,
+        es: `${BASE_URL}/es/Quote`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/${lang}/Quote`,
+      siteName: "Essential Sites",
+      locale: lang === "es" ? "es_ES" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
 
 const inputClass = "w-full bg-dark-card border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 focus:outline-none focus:border-accent/50 focus:ring-1 focus:ring-accent/50 transition-colors";
 const labelClass = "block text-gray-400 text-sm mb-2";

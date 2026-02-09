@@ -23,16 +23,15 @@ export default function Header({ lang, dict }: HeaderProps) {
           <Image
             src="/images/essentiallogo.png"
             alt="Essential Sites"
-            width={160}
-            height={60}
-            className=" w-auto invert"
+            width={130}
+            height={50}
+            className="w-auto invert"
           />
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
           <Link href={`/${lang}`} className="text-gray-400 hover:text-white text-sm tracking-wide transition-colors">{dict.nav.home}</Link>
           <Link href={`/${lang}/Bundles`} className="text-gray-400 hover:text-white text-sm tracking-wide transition-colors">{dict.nav.bundles}</Link>
-          <Link href={`/${lang}/book`} className="text-gray-400 hover:text-white text-sm tracking-wide transition-colors">{dict.nav.book}</Link>
           <Link href={switchedPath} className="text-gray-400 hover:text-white text-sm font-semibold border border-white/10 px-3 py-1.5 rounded transition-colors">
             {otherLang.toUpperCase()}
           </Link>
@@ -75,7 +74,6 @@ export default function Header({ lang, dict }: HeaderProps) {
         <nav className="flex flex-col gap-1 p-4">
           <Link href={`/${lang}`} onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg transition-colors">{dict.nav.home}</Link>
           <Link href={`/${lang}/Bundles`} onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg transition-colors">{dict.nav.bundles}</Link>
-          <Link href={`/${lang}/book`} onClick={() => setIsOpen(false)} className="text-gray-300 hover:text-white hover:bg-white/5 px-4 py-3 rounded-lg transition-colors">{dict.nav.book}</Link>
           <Link href={`/${lang}/Quote`} onClick={() => setIsOpen(false)} className="bg-accent hover:bg-accent-dark text-white text-center font-medium px-4 py-3 rounded-lg transition-colors mt-4">
             {dict.nav.getQuote}
           </Link>
