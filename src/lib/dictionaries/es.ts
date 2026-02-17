@@ -46,6 +46,12 @@ const es = {
         image: "/work-3rscustomhomes.png",
         description: "Un sitio para constructores de casas personalizadas, diseñado para destacar su trabajo y generar consultas.",
       },
+      {
+        name: "Invita",
+        url: "https://www.getinvita.com",
+        image: "/work-getinvita.png",
+        description: "Una plataforma de invitaciones digitales que permite crear sitios web para eventos con galerías de fotos, música, confirmaciones de asistencia y cuenta regresiva.",
+      },
     ],
     visit: "Visitar Sitio",
   },
@@ -74,27 +80,23 @@ const es = {
     cta: "Cotización Gratis",
     buildLabel: "Costo único",
     monthlyLabel: "/mes",
-    monthlyIncludes: "Mensual incluye:",
+    monthlyIncludes: "Planes Mensuales",
+    monthlyTitle: "Elige Tu Plan Mensual",
+    monthlySubtitle: "Elige un plan mensual que se adapte a tus necesidades. Combínalo con cualquier paquete de arriba.",
     packages: [
       {
         name: "Inicial",
         price: "$500",
-        monthly: "$50",
         features: [
           "Sitio Web de 1–2 Páginas",
           "Diseño Adaptable a Móviles",
           "Formulario de Contacto",
           "Configuración de Correo Empresarial",
         ],
-        monthlyFeatures: [
-          "Hospedaje y actualizaciones de seguridad",
-          "Monitoreo de disponibilidad",
-        ],
       },
       {
         name: "Profesional",
         price: "$1,000",
-        monthly: "$100",
         features: [
           "Hasta 5 Páginas",
           "Responsive para Móviles y Tablets",
@@ -102,16 +104,10 @@ const es = {
           "Configuración de Correo Empresarial",
           "SEO Básico",
         ],
-        monthlyFeatures: [
-          "Hospedaje y actualizaciones de seguridad",
-          "Monitoreo de disponibilidad",
-          "Hasta 2 ediciones de contenido/mes",
-        ],
       },
       {
         name: "Citas",
         price: "$1,500",
-        monthly: "$150",
         features: [
           "Sitio Web Listo para Citas",
           "Sistema de Reservas Multi-Usuario",
@@ -120,17 +116,10 @@ const es = {
           "Configuración de Correo Empresarial",
           "SEO Básico",
         ],
-        monthlyFeatures: [
-          "Hospedaje y actualizaciones de seguridad",
-          "Monitoreo de disponibilidad",
-          "Hasta 2 ediciones de contenido/mes",
-          "Soporte del sistema de reservas",
-        ],
       },
       {
         name: "eCommerce",
         price: "$2,000",
-        monthly: "$200",
         features: [
           "Hasta 10 Productos con Carrito",
           "Integración de Pagos con Stripe",
@@ -139,7 +128,36 @@ const es = {
           "Configuración de Correo Empresarial",
           "SEO + Google Analytics",
         ],
-        monthlyFeatures: [
+      },
+    ],
+    monthlyPlans: [
+      {
+        price: "$50",
+        features: [
+          "Hospedaje y actualizaciones de seguridad",
+          "Monitoreo de disponibilidad",
+        ],
+      },
+      {
+        price: "$100",
+        features: [
+          "Hospedaje y actualizaciones de seguridad",
+          "Monitoreo de disponibilidad",
+          "Hasta 2 ediciones de contenido/mes",
+        ],
+      },
+      {
+        price: "$150",
+        features: [
+          "Hospedaje y actualizaciones de seguridad",
+          "Monitoreo de disponibilidad",
+          "Hasta 2 ediciones de contenido/mes",
+          "Soporte del sistema de reservas",
+        ],
+      },
+      {
+        price: "$200",
+        features: [
           "Hospedaje y actualizaciones de seguridad",
           "Monitoreo de disponibilidad",
           "Hasta 4 ediciones de contenido/mes",

@@ -46,6 +46,12 @@ const en = {
         image: "/work-3rscustomhomes.png",
         description: "A custom home builder site designed to highlight craftsmanship, past projects, and drive consultations.",
       },
+      {
+        name: "Invita",
+        url: "https://www.getinvita.com",
+        image: "/work-getinvita.png",
+        description: "A digital invitation platform that lets users create custom event websites with photo galleries, music, RSVP management, and countdown timers.",
+      },
     ],
     visit: "Visit Site",
   },
@@ -74,27 +80,23 @@ const en = {
     cta: "Get a Free Quote",
     buildLabel: "One-time build",
     monthlyLabel: "/mo",
-    monthlyIncludes: "Monthly includes:",
+    monthlyIncludes: "Monthly Plans",
+    monthlyTitle: "Choose Your Monthly Plan",
+    monthlySubtitle: "Pick a monthly plan that fits your needs. Pair it with any build package above.",
     packages: [
       {
         name: "Starter",
         price: "$500",
-        monthly: "$50",
         features: [
           "1–2 Page Custom Website",
           "Mobile-Friendly Design",
           "Contact Form",
           "Business Email Setup",
         ],
-        monthlyFeatures: [
-          "Hosting & security updates",
-          "Uptime monitoring",
-        ],
       },
       {
         name: "Professional",
         price: "$1,000",
-        monthly: "$100",
         features: [
           "Up to 5 Pages",
           "Mobile & Tablet Responsive",
@@ -102,16 +104,10 @@ const en = {
           "Business Email Setup",
           "Basic SEO Setup",
         ],
-        monthlyFeatures: [
-          "Hosting & security updates",
-          "Uptime monitoring",
-          "Up to 2 content edits/mo",
-        ],
       },
       {
         name: "Appointments",
         price: "$1,500",
-        monthly: "$150",
         features: [
           "Custom Appointment-Ready Website",
           "Multi-User Booking System",
@@ -120,17 +116,10 @@ const en = {
           "Business Email Setup",
           "Basic SEO Setup",
         ],
-        monthlyFeatures: [
-          "Hosting & security updates",
-          "Uptime monitoring",
-          "Up to 2 content edits/mo",
-          "Booking system support",
-        ],
       },
       {
         name: "eCommerce",
         price: "$2,000",
-        monthly: "$200",
         features: [
           "Up to 10 Products w/ Custom Cart",
           "Stripe Payment Integration",
@@ -139,7 +128,36 @@ const en = {
           "Business Email Setup",
           "SEO Setup + Google Analytics",
         ],
-        monthlyFeatures: [
+      },
+    ],
+    monthlyPlans: [
+      {
+        price: "$50",
+        features: [
+          "Hosting & security updates",
+          "Uptime monitoring",
+        ],
+      },
+      {
+        price: "$100",
+        features: [
+          "Hosting & security updates",
+          "Uptime monitoring",
+          "Up to 2 content edits/mo",
+        ],
+      },
+      {
+        price: "$150",
+        features: [
+          "Hosting & security updates",
+          "Uptime monitoring",
+          "Up to 2 content edits/mo",
+          "Booking system support",
+        ],
+      },
+      {
+        price: "$200",
+        features: [
           "Hosting & security updates",
           "Uptime monitoring",
           "Up to 4 content edits/mo",
