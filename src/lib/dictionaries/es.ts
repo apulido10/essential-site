@@ -47,7 +47,7 @@ const es = {
         description: "Un sitio para constructores de casas personalizadas, diseñado para destacar su trabajo y generar consultas.",
       },
       {
-        name: "Invita",
+        name: "GetInvita",
         url: "https://www.getinvita.com",
         image: "/work-getinvita.png",
         description: "Una plataforma de invitaciones digitales que permite crear sitios web para eventos con galerías de fotos, música, confirmaciones de asistencia y cuenta regresiva.",

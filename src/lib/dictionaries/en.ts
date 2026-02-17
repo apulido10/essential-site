@@ -47,7 +47,7 @@ const en = {
         description: "A custom home builder site designed to highlight craftsmanship, past projects, and drive consultations.",
       },
       {
-        name: "Invita",
+        name: "GetInvita",
         url: "https://www.getinvita.com",
         image: "/work-getinvita.png",
         description: "A digital invitation platform that lets users create custom event websites with photo galleries, music, RSVP management, and countdown timers.",
