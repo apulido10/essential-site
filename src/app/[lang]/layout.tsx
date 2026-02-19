@@ -1,5 +1,4 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
 import type { Lang } from "@/lib/getDictionary";
 import getDictionary from "@/lib/getDictionary";
 import Header from "../components/Header";
@@ -31,15 +30,13 @@ export default async function LangLayout({
   const dict = await getDictionary(lang);
 
   return (
-    <html lang={lang}>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <div
+      lang={lang}
+      className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+    >
         <Header lang={lang} dict={dict} />
         {children}
         <Footer lang={lang} dict={dict} />
-        <Analytics />
-      </body>
-    </html>
+    </div>
   );
 }
